@@ -1,0 +1,12 @@
+<ol>
+    <li *ngFor="let elem of arr; let i = index" >
+        <div [ngClass]="'pink'" *ngIf="i%2==0 ;else greenyellow">
+            {{elem}}
+        </div>
+        <ng-template #bgreenyellow >
+            <div [ngClass]="'greenyellow'">
+                {{elem}}
+            </div>
+        </ng-template>
+    </li>
+</ol>
